@@ -1,0 +1,158 @@
+@font-face {
+    font-family: "sacramento";
+    src: url(./font/Sacramento.ttf);
+}
+
+@font-face {
+    font-family: "montserrat";
+    src: url(./font/Montserrat.ttf);
+}
+
+@font-face {
+    font-family: "pinyon";
+    src: url(./font/Pinyon.ttf);
+}
+
+@font-face {
+    font-family: "oswald";
+    src: url(./font/Oswald.ttf);
+}
+
+@font-face {
+    font-family: "yeseva";
+    src: url(./font/Yeseva.ttf);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: rgba(0, 0, 0, 0.17) url('./img/background.jpg') ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-blend-mode: darken;
+    font-family: yeseva;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+}
+
+.logoHeader {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.imgLogo {
+    width: 70%;
+}
+
+.containerPromo {
+    background-color: rgba( 255, 255, 255, 0.15 );
+    clear: both;
+    margin: 8px 1%;
+    border-radius: 5px;
+}
+
+.containerPromo h2 {
+    margin: 0;
+    padding: 0;
+    font-family: oswald;
+}
+
+.buttonGroup {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+@media (max-width: 403){
+    .buttonGroup {
+        justify-content: flex-start;
+    }
+}
+
+.buttonGroup a.button {
+    width: 20%;
+    flex: 1 1 150px;
+}
+
+@media (max-width: 640px){
+    .buttonGroup a.button p {
+        font-size: 1rem;
+    }
+}
+@media (min-width: 640px){
+    .buttonGroup a.button p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .buttonGroup a.button p {
+        font-size: 1.1rem;
+    }
+    .title h1 {
+        font-size: 1.2rem;
+    }
+    .conteudo h1 {
+        font-size: 1.2rem;
+    }
+    .buttonGroup a.button {
+        width: 40%;
+    }
+}
+
+@media (max-width: 270px) {
+    .buttonGroup a.button p {
+        font-size: 0.8rem;
+    }
+}
+@media (max-width: 200px) {
+    .buttonGroup a.button p {
+        font-size: 0.5rem;
+    }
+}
+
+a.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    border: 2px solid gray;
+    border-radius: 5px;
+    padding: 0px 2px;
+    margin: 10px 5px;
+    background-color: rgba( 255, 255, 255, 0.35 );
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 1.6rem;
+    text-align: center;
+    font-family: oswald;
+    height: 90px;
+}
+
+.button p {
+    margin: 0;
+    padding: 0;
+}
+
+.title {
+    text-align: center;
+    color: whitesmoke;
+    font-family: yeseva;
+    border: 1px solid gold;
+    background-color: rgba( 255, 255, 0, 0.35 );
+}
+
+.conteudo {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: whitesmoke;
+}

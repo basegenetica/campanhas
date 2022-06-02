@@ -32,11 +32,18 @@
         document.title = nomeArquivo
         console.log(tipo)
         var myPdf = document.getElementById("myPdf")
-        if (tipo == "politica") {
-            myPdf.setAttribute("data", "./politicaComercial/junho_22/" + nomeArquivo + ".pdf")
-        } else if (tipo == "promo") {
-            myPdf.setAttribute("data", "./promocoes/" + promo + "/" + nomeArquivo + ".pdf")
+        if (navigator.plugins['PDF Viewer']) {
+            if (tipo == "politica") {
+                myPdf.setAttribute("data", "./politicaComercial/junho_22/" + nomeArquivo + ".pdf")
+            } else if (tipo == "promo") {
+                myPdf.setAttribute("data", "./promocoes/" + promo + "/" + nomeArquivo + ".pdf")
+            }
+        } else {
+            document.write('vc não tem o raio desse plugin')
         }
+
+        var plugins = navigator.plugins['PDF Viewer']
+        console.log(plugins)
     </script>
 </body>
 

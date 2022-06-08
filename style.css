@@ -81,6 +81,11 @@ header {
     flex: 1 1 150px;
 }
 
+.containerPromo h5 {
+    margin: 0;
+    padding: 0;
+}
+
 
 @media (min-width: 640px){
     .buttonGroup a.button p {

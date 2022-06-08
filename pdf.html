@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -10,19 +10,13 @@
         body {
             margin: 0;
             padding: 0;
-        }
-
-        object {
-            width: 100%;
             height: 100vh;
         }
     </style>
 </head>
 
 <body>
-    <object id="myPdf" type="application/pdf">
-        <p>Seu navegador não tem um plugin pra PDF</p>
-    </object>
+    <iframe id="myPdf" width="100%" height="100%"></iframe>
     <script>
         var url_string = window.location.href;
         var url = new URL(url_string);
@@ -34,16 +28,13 @@
         var myPdf = document.getElementById("myPdf")
         if (navigator.plugins['PDF Viewer']) {
             if (tipo == "politica") {
-                myPdf.setAttribute("data", "./politicaComercial/junho_22/" + nomeArquivo + ".pdf")
+                myPdf.setAttribute("src", "./politicaComercial/junho_22/" + nomeArquivo + ".pdf")
             } else if (tipo == "promo") {
-                myPdf.setAttribute("data", "./promocoes/" + promo + "/" + nomeArquivo + ".pdf")
+                myPdf.setAttribute("src", "./promocoes/" + promo + "/" + nomeArquivo + ".pdf")
             }
         } else {
             document.write('página em construção')
         }
-
-        var plugins = navigator.plugins['PDF Viewer']
-        console.log(plugins)
     </script>
 </body>
 

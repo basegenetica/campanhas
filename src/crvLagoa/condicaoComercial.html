@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../style.css">
+    <title>Base Genética</title>
+    <style>
+        @media (max-width: 640px) {
+            table {
+                font-size: 0.8rem;
+            }
+
+            .tabelFontMin {
+                font-size: 0.6rem;
+            }
+        }
+        @media (max-width: 450px) {
+            table {
+                font-size: 0.7rem;
+            }
+
+            .tabelFontMin {
+                font-size: 0.5rem;
+            }
+        }
+
+
+        table {
+
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        .colorRed {
+            color: red;
+        }
+
+        .containerTable {
+            display: flex;
+            justify-content: center;
+            margin: 10px 1%;
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CONDIÇÃO COMERCIAL</h1>
+    <div class="containerTable">
+        <table>
+            <tr>
+                <th colspan="12">
+                    <h2>CONDIÇÃO DE VENDA PARA PRODUTO CORTE</h2>
+                </th>
+            </tr>
+            <tr>
+                <th rowspan="3">Valor do <br> Pedido</th>
+                <th rowspan="3">Nº de <br> parcelas</th>
+                <th colspan="10">% de desconto no pedido conforme prazo médio</th>
+            </tr>
+            <tr>
+                <th>Parc</th>
+                <th>vista</th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+                <th>6</th>
+                <th>7</th>
+                <th>8</th>
+            </tr>
+            <tr>
+                <th class="tabelFontMin">Przo M</th>
+                <th class="tabelFontMin">1 a 29</th>
+                <th class="tabelFontMin">30 a 44</th>
+                <th class="tabelFontMin">45 a 59</th>
+                <th class="tabelFontMin">60 a 74</th>
+                <th class="tabelFontMin">75 a 89</th>
+                <th class="tabelFontMin">90 a 104</th>
+                <th class="tabelFontMin">105 a 119</th>
+                <th class="tabelFontMin">120 a 134</th>
+                <th class="tabelFontMin">135 a 999</th>
+            </tr>
+            <tr>
+                <td>>0,01</td>
+                <td>-</td>
+                <td colspan="2">0</td>
+                <td class="colorRed">-1%</td>
+                <td class="colorRed">-2%</td>
+                <td class="colorRed">-3%</td>
+                <td class="colorRed">-4%</td>
+                <td class="colorRed">-5%</td>
+                <td class="colorRed">-6%</td>
+                <td class="colorRed">-7%</td>
+                <td class="colorRed">-8%</td>
+            </tr>
+            <tr>
+                <td>>500,00</td>
+                <td>1</td>
+                <td colspan="2">1%</td>
+                <td style="font-weight: bold;">0</td>
+                <td class="colorRed">-1%</td>
+                <td class="colorRed">-2%</td>
+                <td class="colorRed">-3%</td>
+                <td class="colorRed">-4%</td>
+                <td class="colorRed">-5%</td>
+                <td class="colorRed">-6%</td>
+                <td class="colorRed">-7%</td>
+            </tr>
+            <tr>
+                <td>>800,00</td>
+                <td>2</td>
+                <td colspan="2">2%</td>
+                <td>1%</td>
+                <td style="font-weight: bold;">0</td>
+                <td class="colorRed">-1%</td>
+                <td class="colorRed">-2%</td>
+                <td class="colorRed">-3%</td>
+                <td class="colorRed">-4%</td>
+                <td class="colorRed">-5%</td>
+                <td class="colorRed">-6%</td>
+            </tr>
+            <tr>
+                <td>>1.200,00</td>
+                <td>3</td>
+                <td colspan="2">3%</td>
+                <td>2%</td>
+                <td>1%</td>
+                <td style="font-weight: bold;">0</td>
+                <td class="colorRed" class="colorRed">-1%</td>
+                <td class="colorRed" class="colorRed">-2%</td>
+                <td class="colorRed" class="colorRed">-3%</td>
+                <td class="colorRed" class="colorRed">-4%</td>
+                <td class="colorRed" class="colorRed">-5%</td>
+            </tr>
+            <tr>
+                <td>>1.600,00</td>
+                <td>4</td>
+                <td colspan="2">4%</td>
+                <td>3%</td>
+                <td>2%</td>
+                <td>1%</td>
+                <td style="font-weight: bold;">0</td>
+                <td class="colorRed">-1%</td>
+                <td class="colorRed">-2%</td>
+                <td class="colorRed">-3%</td>
+                <td class="colorRed">-4%</td>
+            </tr>
+            <tr>
+                <td>>2.300,00</td>
+                <td>5</td>
+                <td colspan="2">5%</td>
+                <td>4%</td>
+                <td>3%</td>
+                <td>2%</td>
+                <td>1%</td>
+                <td style="font-weight: bold;">0</td>
+                <td class="colorRed">-1%</td>
+                <td class="colorRed">-2%</td>
+                <td class="colorRed">-3%</td>
+            </tr>
+            <tr>
+                <td>>3.800,00</td>
+                <td>6</td>
+                <td colspan="2">6%</td>
+                <td>5%</td>
+                <td>4%</td>
+                <td>3%</td>
+                <td>2%</td>
+                <td>1%</td>
+                <td style="font-weight: bold;">0</td>
+                <td class="colorRed">-1%</td>
+                <td class="colorRed">-2%</td>
+            </tr>
+            <tr>
+                <td>>5.750,00</td>
+                <td>7</td>
+                <td colspan="2">7%</td>
+                <td>6%</td>
+                <td>5%</td>
+                <td>4%</td>
+                <td>3%</td>
+                <td>2%</td>
+                <td>1%</td>
+                <td style="font-weight: bold;">0</td>
+                <td class="colorRed">-1%</td>
+            </tr>
+            <tr>
+                <td>>8.300,00</td>
+                <td>8</td>
+                <td colspan="2">8%</td>
+                <td>7%</td>
+                <td>6%</td>
+                <td>5%</td>
+                <td>4%</td>
+                <td>3%</td>
+                <td>2%</td>
+                <td>1%</td>
+                <td style="font-weight: bold;">0</td>
+            </tr>
+        </table>
+    </div>
+    <div class="containerTable">
+        <table border="1">
+            <tr>
+                <th colspan="12">
+                    <h2>CONDIÇÃO DE VENDA PARA PRODUTO LEITE</h2>
+                </th>
+            </tr>
+            <tr>
+                <th rowspan="3">Valor do <br> Pedido</th>
+                <th rowspan="3">Nº de <br> parcelas</th>
+                <th colspan="10">% de desconto no pedido conforme prazo médio</th>
+            </tr>
+            <tr>
+                <th>Parc</th>
+                <th>vista</th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+                <th>6</th>
+                <th>7</th>
+                <th>8</th>
+            </tr>
+            <tr>
+                <th class="tabelFontMin">Przo M</th>
+                <th class="tabelFontMin">1 a 29</th>
+                <th class="tabelFontMin">30 a 44</th>
+                <th class="tabelFontMin">45 a 59</th>
+                <th class="tabelFontMin">60 a 74</th>
+                <th class="tabelFontMin">75 a 89</th>
+                <th class="tabelFontMin">90 a 104</th>
+                <th class="tabelFontMin">105 a 119</th>
+                <th class="tabelFontMin">120 a 134</th>
+                <th class="tabelFontMin">135 a 999</th>
+            </tr>
+            <tr>
+                <td>>0,01</td>
+                <td>-</td>
+                <td colspan="2">0</td>
+                <td class="colorRed">-1%</td>
+                <td class="colorRed">-2%</td>
+                <td class="colorRed">-3%</td>
+                <td class="colorRed">-4%</td>
+                <td class="colorRed">-5%</td>
+                <td class="colorRed">-6%</td>
+                <td class="colorRed">-7%</td>
+                <td class="colorRed">-8%</td>
+            </tr>
+            <tr>
+                <td>>300,00</td>
+                <td>1</td>
+                <td colspan="2">1%</td>
+                <td style="font-weight: bold;">0</td>
+                <td class="colorRed">-1%</td>
+                <td class="colorRed">-2%</td>
+                <td class="colorRed">-3%</td>
+                <td class="colorRed">-4%</td>
+                <td class="colorRed">-5%</td>
+                <td class="colorRed">-6%</td>
+                <td class="colorRed">-7%</td>
+            </tr>
+            <tr>
+                <td>>500,00</td>
+                <td>2</td>
+                <td colspan="2">2%</td>
+                <td>1%</td>
+                <td style="font-weight: bold;">0</td>
+                <td class="colorRed">-1%</td>
+                <td class="colorRed">-2%</td>
+                <td class="colorRed">-3%</td>
+                <td class="colorRed">-4%</td>
+                <td class="colorRed">-5%</td>
+                <td class="colorRed">-6%</td>
+            </tr>
+            <tr>
+                <td>>700,00</td>
+                <td>3</td>
+                <td colspan="2">3%</td>
+                <td>2%</td>
+                <td>1%</td>
+                <td style="font-weight: bold;">0</td>
+                <td class="colorRed" class="colorRed">-1%</td>
+                <td class="colorRed" class="colorRed">-2%</td>
+                <td class="colorRed" class="colorRed">-3%</td>
+                <td class="colorRed" class="colorRed">-4%</td>
+                <td class="colorRed" class="colorRed">-5%</td>
+            </tr>
+            <tr>
+                <td>>950,00</td>
+                <td>4</td>
+                <td colspan="2">4%</td>
+                <td>3%</td>
+                <td>2%</td>
+                <td>1%</td>
+                <td style="font-weight: bold;">0</td>
+                <td class="colorRed">-1%</td>
+                <td class="colorRed">-2%</td>
+                <td class="colorRed">-3%</td>
+                <td class="colorRed">-4%</td>
+            </tr>
+            <tr>
+                <td>>1.200,00</td>
+                <td>5</td>
+                <td colspan="2">5%</td>
+                <td>4%</td>
+                <td>3%</td>
+                <td>2%</td>
+                <td>1%</td>
+                <td style="font-weight: bold;">0</td>
+                <td class="colorRed">-1%</td>
+                <td class="colorRed">-2%</td>
+                <td class="colorRed">-3%</td>
+            </tr>
+            <tr>
+                <td>>1.600,00</td>
+                <td>6</td>
+                <td colspan="2">6%</td>
+                <td>5%</td>
+                <td>4%</td>
+                <td>3%</td>
+                <td>2%</td>
+                <td>1%</td>
+                <td style="font-weight: bold;">0</td>
+                <td class="colorRed">-1%</td>
+                <td class="colorRed">-2%</td>
+            </tr>
+            <tr>
+                <td>>2.200,00</td>
+                <td>7</td>
+                <td colspan="2">7%</td>
+                <td>6%</td>
+                <td>5%</td>
+                <td>4%</td>
+                <td>3%</td>
+                <td>2%</td>
+                <td>1%</td>
+                <td style="font-weight: bold;">0</td>
+                <td class="colorRed">-1%</td>
+            </tr>
+            <tr>
+                <td>>3.300,00</td>
+                <td>8</td>
+                <td colspan="2">8%</td>
+                <td>7%</td>
+                <td>6%</td>
+                <td>5%</td>
+                <td>4%</td>
+                <td>3%</td>
+                <td>2%</td>
+                <td>1%</td>
+                <td style="font-weight: bold;">0</td>
+            </tr>
+        </table>
+    </div>
+    <a class="button" href="./index.html">VOLTAR</a>
+</body>
+
+</html>

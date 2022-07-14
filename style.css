@@ -119,7 +119,7 @@ header {
     }
 }
 
-a.button {
+a.button, .button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -161,4 +161,10 @@ a.button {
 h4 {
     margin: 0;
     padding: 0;
+}
+
+a.voltar {
+    background-color: silver;
+    color: gray;
+    font-size: 3rem;
 }

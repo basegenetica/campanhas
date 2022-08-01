@@ -135,6 +135,7 @@ a.button, .button {
     text-align: center;
     font-family: oswald;
     height: 90px;
+    margin: 2px 5px;
 }
 
 .button p {

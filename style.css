@@ -128,7 +128,7 @@ a.button, .button {
     border: 2px solid gray;
     border-radius: 5px;
     padding: 0px 2px;
-    background-color: rgba( 255, 255, 255, 0.35 );
+    background-color: rgba( 255, 255, 255, 0.25 );
     color: whitesmoke;
     text-decoration: none;
     font-size: 1.6rem;
@@ -164,7 +164,9 @@ h4 {
 }
 
 a.voltar {
-    background-color: silver;
-    color: gray;
+    background-color: whitesmoke;
+    color: darkolivegreen;
     font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 1px 2px silver;
 }

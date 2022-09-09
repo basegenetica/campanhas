@@ -5,60 +5,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../style.css">
+    <script type="text/javascript" src="../../../jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../../../jquery.mask.min.js"></script>
+    <link rel="stylesheet" href="../../../style.css">
+    <link rel="stylesheet" href="./style.css">
     <title>Base Genética</title>
-    <style>
-        @media (max-width: 640px) {
-            table {
-                font-size: 0.8rem;
-            }
-
-            .tabelFontMin {
-                font-size: 0.6rem;
-            }
-        }
-        @media (max-width: 450px) {
-            table {
-                font-size: 0.7rem;
-            }
-
-            .tabelFontMin {
-                font-size: 0.5rem;
-            }
-        }
-
-
-        table {
-
-            text-align: center;
-            background-color: rgba(255, 255, 255, 0.7);
-        }
-
-        table,
-        th,
-        td {
-            border: 1px solid black;
-            border-collapse: collapse;
-        }
-
-        .colorRed {
-            color: red;
-        }
-
-        .containerTable {
-            display: flex;
-            justify-content: center;
-            margin: 10px 1%;
-        }
-
-        h1 {
-            text-align: center;
-        }
-    </style>
 </head>
 
 <body>
     <h1>CONDIÇÃO COMERCIAL</h1>
+    <div>
+        <hr>
+        <h1>Teste de Condição</h1>
+        <div class="inputGroup">
+            <form name="calculo">
+                <div class="inputItem">
+                    <label for="valor">Valor: R$</label>
+                    <input inputmode="numeric" type="text" name="valor" id="valor" onkeyup="calcula()">
+                </div>
+                <div class="inputItem">
+                    <label>Pasta:</label>
+                    <div class="radioItem">
+                        <label for="corte">Corte</label>
+                        <input checked type="radio" name="pasta" id="corte" value="corte" onkeyup="calcula()">
+                    </div>
+                    <div class="radioItem">
+                        <label for="leite">Leite</label>
+                        <input type="radio" name="pasta" id="leite" value="leite" onkeyup="calcula()">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <hr style="border:1.5px dotted white;">
+        <h1>Parcelamento Máximo</h1>
+        <h1 id="result">-</h1>
+        <hr>
+    </div>
     <div class="containerTable">
         <table>
             <tr>
@@ -369,7 +351,73 @@
             </tr>
         </table>
     </div>
+
     <a class="button voltar" href="./index.html">VOLTAR</a>
+    <script>
+        //Aplicando mascara R$
+        $("#valor").mask("999.990,00", { reverse: true })
+
+        var rad = document.calculo.pasta;
+        var prev = null;
+        for (var i = 0; i < rad.length; i++) {
+            rad[i].onclick = function () {
+                calcula(this);
+            }
+        };
+
+        async function calcula() {
+            var valor = document.getElementById("valor").value
+            var pasta = document.querySelector('input[name=pasta]:checked').value
+            valor = valor.toString().replace(".", "")
+            valor = valor.toString().replace(",", ".")
+            console.log(valor + " - " + pasta)
+            //calcula!
+            if (pasta == "corte") {
+                if (valor < 500) {
+                    result = "a vista"
+                } else if (valor < 800) {
+                    result = "1 parcela"
+                } else if (valor < 1200) {
+                    result = "2  parcelas"
+                } else if (valor < 1600) {
+                    result = "3 parcelas"
+                } else if (valor < 2300) {
+                    result = "4 parcelas"
+                } else if (valor < 3800) {
+                    result = "5 parcelas"
+                } else if (valor < 5750) {
+                    result = "6 parcelas"
+                } else if (valor < 8300) {
+                    result = "7 parcelas"
+                } else if (valor > 8300) {
+                    result = "8 parcelas"
+                }
+            } else if (pasta == "leite") {
+                if (valor < 300) {
+                    result = "a vista"
+                } else if (valor < 500) {
+                    result = "1 parcela"
+                } else if (valor < 700) {
+                    result = "2 parcelas"
+                } else if (valor < 950) {
+                    result = "3 parcelas"
+                } else if (valor < 1200) {
+                    result = "4 parcelas"
+                } else if (valor < 1600) {
+                    result = "5 parcelas"
+                } else if (valor < 2200) {
+                    result = "6 parcelas"
+                } else if (valor < 3300) {
+                    result = "7 parcelas"
+                } else if (valor > 3300) {
+                    result = "8 parcelas"
+                }
+            }
+            var textResult = document.getElementById("result")
+            textResult.innerHTML = result
+        }
+
+    </script>
 </body>
 
 </html>

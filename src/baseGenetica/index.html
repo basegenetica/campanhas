@@ -14,6 +14,7 @@
             flex-direction: column;
             justify-content: center;
             height: 100vh;
+            text-align: center;
         }
 
         .titlePage {
@@ -29,20 +30,36 @@
                 font-size: 3rem;
             }
         }
+
+        .containerPromo p {
+            color: whitesmoke;
+            text-shadow: 1px 1px 1px black;
+        }
     </style>
 </head>
 
 <body>
     <div class="content">
-        <h1 class="titlePage">BASE GENÉTICA</h1>
-        <a class="button" href="./rotas.html">Rotas de Nitrogênio</a>
-        <a class="button" href="https://api.whatsapp.com/send?text=https%3A%2F%2Fmaps.app.goo.gl%2Ff4i5HnGhsbDQECL18">Localização da Empresa <p
-                style="font-size: 0.8rem;">Google Maps</p></a>
-        <a class="button" href="./contatos.html">Contatos</a>
-        <a href="https://api.whatsapp.com/send?text=https%3A%2F%2Fforms.gle%2FTcrmQupFnECs4tVq6%20%20" class="button">Cadastro de Cliente <p
-            style="font-size: 1rem;">Formulário Google</p></a>
+        <div>
+            <img src="../../img/logoSemFundo.png" height="130px">
+        </div>
+        <div class="containerPromo">
+            <p>Arquivos individuais das datas das rotas de nitrogênio em PDF</p>
+            <a class="button" href="./rotas.html">Rotas de Nitrogênio</a>
+        </div>
+        <div class="containerPromo">
+            <p>Enviar a localização do escritório por WhatsApp</p>
+            <a class="button"
+            href="https://api.whatsapp.com/send?text=https%3A%2F%2Fmaps.app.goo.gl%2Ff4i5HnGhsbDQECL18">Localização da
+            Empresa <p style="font-size: 0.8rem;">Google Maps</p></a>
+        </div>
+        <div class="containerPromo">
+            <p>Enviar o formulário de cadastro de clientes por WhatsApp</p>
+            <a href="https://api.whatsapp.com/send?text=https%3A%2F%2Fforms.gle%2FTcrmQupFnECs4tVq6%20%20"
+                class="button">Cadastro de Cliente <p style="font-size: 1rem;">Formulário Google</p></a>
+        </div>
         <br>
-        <a class="button voltar" href="../../index.html">VOLTAR</a>
+        <a class="button voltar" href="../../index.html">Voltar</a>
 </body>
 <script>
     if (!navigator.plugins['PDF Viewer']) {

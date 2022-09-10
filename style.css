@@ -26,11 +26,7 @@
 body {
     margin: 0;
     padding: 0;
-    background: darkolivegreen ;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-blend-mode: darken;
+    background: aliceblue ;
     font-family: yeseva;
 }
 
@@ -50,16 +46,17 @@ header {
 }
 
 .containerPromo {
-    background-color: rgba( 255, 255, 255, 0.15 );
+    background-color: rgba( 30, 144, 255, 0.45 );
     clear: both;
-    margin: 8px 1%;
+    margin: 15px 1%;
     border-radius: 5px;
+    border: 3px inset rgba( 30, 144, 255, 0.45 );
 }
 
 .containerPromo h2 {
     margin: 0;
     padding: 0;
-    font-family: oswald;
+    font-family: montserrat;
 }
 
 .buttonGroup {
@@ -125,13 +122,14 @@ a.button, .button {
     justify-content: center;
     align-content: center;
     flex-direction: column;
-    border: 2px solid gray;
-    border-radius: 5px;
+    border: 5.5px outset royalblue;
+    border-radius: 10px;
     padding: 0px 2px;
-    background-color: rgba( 255, 255, 255, 0.25 );
+    background-color: royalblue;
     color: whitesmoke;
+    text-shadow: 1px 1px black;
     text-decoration: none;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     text-align: center;
     font-family: oswald;
     height: 90px;
@@ -145,17 +143,16 @@ a.button, .button {
 
 .title {
     text-align: center;
-    color: whitesmoke;
+    color: dodgerblue;
     font-family: yeseva;
-    border: 1px solid gold;
-    background-color: rgba( 255, 255, 0, 0.35 );
+    text-shadow: 1.25px 1.25px 1.25px black;
 }
 
 .conteudo {
     margin: 0;
     padding: 0;
     text-align: center;
-    color: whitesmoke;
+    color: black;
 }
 
 h4 {
@@ -164,9 +161,11 @@ h4 {
 }
 
 a.voltar {
-    background-color: whitesmoke;
-    color: darkolivegreen;
-    font-size: 3rem;
+    background-color: royalblue;
+    font-family: yeseva;
+    color: whitesmoke;
+    border-radius: 90px;
+    font-size: 4rem;
     font-weight: bold;
-    text-shadow: 1px 2px silver;
+    text-shadow: 2px 2px black;
 }

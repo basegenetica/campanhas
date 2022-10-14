@@ -21,7 +21,7 @@
             <form name="calculo">
                 <div class="inputItem">
                     <label for="valor">Valor: R$</label>
-                    <input inputmode="numeric" type="text" name="valor" id="valor" onkeyup="calcula()">
+                    <input inputmode="numeric" type="text" name="valor" id="valor" onkeyup="calcula()" placeholder="insira aqui o valor do pedido.">
                 </div>
                 <div class="inputItem">
                     <label>Pasta:</label>
@@ -352,7 +352,7 @@
         </table>
     </div>
 
-    <a class="button voltar" href="./index.html">VOLTAR</a>
+    <a class="button voltar" href="../index.html">VOLTAR</a>
     <script>
         //Aplicando mascara R$
         $("#valor").mask("999.990,00", { reverse: true })

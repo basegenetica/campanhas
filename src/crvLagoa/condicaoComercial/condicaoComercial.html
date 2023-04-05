@@ -12,350 +12,54 @@
     <script type="text/javascript" src="../../../jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="../../../jquery.mask.min.js"></script>
     <link rel="stylesheet" href="../../../style.css">
-    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Base Genética</title>
 </head>
 
 <body>
-    <h1>CONDIÇÃO COMERCIAL</h1>
-    <div>
-        <hr>
-        <h1>Teste de Condição</h1>
-        <div class="inputGroup">
-            <form name="calculo">
-                <div class="inputItem">
-                    <label for="valor">Valor: R$</label>
-                    <input inputmode="numeric" type="text" name="valor" id="valor" onkeyup="calcula()" placeholder="insira aqui o valor do pedido.">
-                </div>
-                <div class="inputItem">
-                    <label>Pasta:</label>
-                    <div class="radioItem">
-                        <label for="corte">Corte</label>
-                        <input checked type="radio" name="pasta" id="corte" value="corte" onkeyup="calcula()">
-                    </div>
-                    <div class="radioItem">
-                        <label for="leite">Leite</label>
-                        <input type="radio" name="pasta" id="leite" value="leite" onkeyup="calcula()">
-                    </div>
-                </div>
-            </form>
+    <div class="container">
+        <h1 class="text-center">CONDIÇÃO COMERCIAL</h1>
+        <h2 class="text-center">Teste de Condição</h2>
+        <form name="calculo">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1">Valor:</label>
+                <input inputmode="numeric" type="text" name="valor" id="valor" onkeyup="calcula()" class="form-control"
+                    placeholder="Insira aqui o valor do pedido.">
+            </div>
+            <div class="mb-3">
+                <p>Selecione a respectiva pasta de touros do orçamento</p>
+                <input class="form-check-input " type="radio" name="pasta" id="corte" value="corte" onkeyup="calcula()"
+                    checked>
+                <label class="form-check-label" for="corte">Corte</label>
+            </div>
+            <div class="mb-3">
+                <input class="form-check-input" type="radio" name="pasta" id="leite" value="leite" onkeyup="calcula()">
+                <label class="form-check-label" for="leite">Leite</label>
+            </div>
+        </form>
+
+        <div class="mb-3 text-center">
+            <h1>Parcelamento Máximo</h1>
+            <h2 id="result">-</h2>
         </div>
-        <hr style="border:1.5px dotted white;">
-        <h1>Parcelamento Máximo</h1>
-        <h1 id="result">-</h1>
         <hr>
+        <div class="row justify-content-center text-center">
+            <figure class="figure">
+                <img src="./assets/corte.png" class="figure-img img-fluid" alt="Política comercial corte">
+                <figcaption class="figure-caption text-center">Política comercial corte</figcaption>
+            </figure>
+            <figure class="figure">
+                <img src="./assets/leite.png" class="figure-img img-fluid" alt="Política comercial leite">
+                <figcaption class="figure-caption text-center">Política comercial leite</figcaption>
+            </figure>
+        </div>
     </div>
-    <div class="containerTable">
-        <table>
-            <tr>
-                <th colspan="12">
-                    <h2>CONDIÇÃO DE VENDA PARA PRODUTO CORTE</h2>
-                </th>
-            </tr>
-            <tr>
-                <th rowspan="3">Valor do <br> Pedido</th>
-                <th rowspan="3">Nº de <br> parcelas</th>
-                <th colspan="10">% de desconto no pedido conforme prazo médio</th>
-            </tr>
-            <tr>
-                <th>Parc</th>
-                <th>vista</th>
-                <th>1</th>
-                <th>2</th>
-                <th>3</th>
-                <th>4</th>
-                <th>5</th>
-                <th>6</th>
-                <th>7</th>
-                <th>8</th>
-            </tr>
-            <tr>
-                <th class="tabelFontMin">Przo M</th>
-                <th class="tabelFontMin">1 a 29</th>
-                <th class="tabelFontMin">30 a 44</th>
-                <th class="tabelFontMin">45 a 59</th>
-                <th class="tabelFontMin">60 a 74</th>
-                <th class="tabelFontMin">75 a 89</th>
-                <th class="tabelFontMin">90 a 104</th>
-                <th class="tabelFontMin">105 a 119</th>
-                <th class="tabelFontMin">120 a 134</th>
-                <th class="tabelFontMin">135 a 999</th>
-            </tr>
-            <tr>
-                <td>>0,01</td>
-                <td>-</td>
-                <td colspan="2">0</td>
-                <td class="colorRed">-1%</td>
-                <td class="colorRed">-2%</td>
-                <td class="colorRed">-3%</td>
-                <td class="colorRed">-4%</td>
-                <td class="colorRed">-5%</td>
-                <td class="colorRed">-6%</td>
-                <td class="colorRed">-7%</td>
-                <td class="colorRed">-8%</td>
-            </tr>
-            <tr>
-                <td>>500,00</td>
-                <td>1</td>
-                <td colspan="2">1%</td>
-                <td style="font-weight: bold;">0</td>
-                <td class="colorRed">-1%</td>
-                <td class="colorRed">-2%</td>
-                <td class="colorRed">-3%</td>
-                <td class="colorRed">-4%</td>
-                <td class="colorRed">-5%</td>
-                <td class="colorRed">-6%</td>
-                <td class="colorRed">-7%</td>
-            </tr>
-            <tr>
-                <td>>800,00</td>
-                <td>2</td>
-                <td colspan="2">2%</td>
-                <td>1%</td>
-                <td style="font-weight: bold;">0</td>
-                <td class="colorRed">-1%</td>
-                <td class="colorRed">-2%</td>
-                <td class="colorRed">-3%</td>
-                <td class="colorRed">-4%</td>
-                <td class="colorRed">-5%</td>
-                <td class="colorRed">-6%</td>
-            </tr>
-            <tr>
-                <td>>1.200,00</td>
-                <td>3</td>
-                <td colspan="2">3%</td>
-                <td>2%</td>
-                <td>1%</td>
-                <td style="font-weight: bold;">0</td>
-                <td class="colorRed" class="colorRed">-1%</td>
-                <td class="colorRed" class="colorRed">-2%</td>
-                <td class="colorRed" class="colorRed">-3%</td>
-                <td class="colorRed" class="colorRed">-4%</td>
-                <td class="colorRed" class="colorRed">-5%</td>
-            </tr>
-            <tr>
-                <td>>1.600,00</td>
-                <td>4</td>
-                <td colspan="2">4%</td>
-                <td>3%</td>
-                <td>2%</td>
-                <td>1%</td>
-                <td style="font-weight: bold;">0</td>
-                <td class="colorRed">-1%</td>
-                <td class="colorRed">-2%</td>
-                <td class="colorRed">-3%</td>
-                <td class="colorRed">-4%</td>
-            </tr>
-            <tr>
-                <td>>2.300,00</td>
-                <td>5</td>
-                <td colspan="2">5%</td>
-                <td>4%</td>
-                <td>3%</td>
-                <td>2%</td>
-                <td>1%</td>
-                <td style="font-weight: bold;">0</td>
-                <td class="colorRed">-1%</td>
-                <td class="colorRed">-2%</td>
-                <td class="colorRed">-3%</td>
-            </tr>
-            <tr>
-                <td>>3.800,00</td>
-                <td>6</td>
-                <td colspan="2">6%</td>
-                <td>5%</td>
-                <td>4%</td>
-                <td>3%</td>
-                <td>2%</td>
-                <td>1%</td>
-                <td style="font-weight: bold;">0</td>
-                <td class="colorRed">-1%</td>
-                <td class="colorRed">-2%</td>
-            </tr>
-            <tr>
-                <td>>5.750,00</td>
-                <td>7</td>
-                <td colspan="2">7%</td>
-                <td>6%</td>
-                <td>5%</td>
-                <td>4%</td>
-                <td>3%</td>
-                <td>2%</td>
-                <td>1%</td>
-                <td style="font-weight: bold;">0</td>
-                <td class="colorRed">-1%</td>
-            </tr>
-            <tr>
-                <td>>8.300,00</td>
-                <td>8</td>
-                <td colspan="2">8%</td>
-                <td>7%</td>
-                <td>6%</td>
-                <td>5%</td>
-                <td>4%</td>
-                <td>3%</td>
-                <td>2%</td>
-                <td>1%</td>
-                <td style="font-weight: bold;">0</td>
-            </tr>
-        </table>
-    </div>
-    <div class="containerTable">
-        <table border="1">
-            <tr>
-                <th colspan="12">
-                    <h2>CONDIÇÃO DE VENDA PARA PRODUTO LEITE</h2>
-                </th>
-            </tr>
-            <tr>
-                <th rowspan="3">Valor do <br> Pedido</th>
-                <th rowspan="3">Nº de <br> parcelas</th>
-                <th colspan="10">% de desconto no pedido conforme prazo médio</th>
-            </tr>
-            <tr>
-                <th>Parc</th>
-                <th>vista</th>
-                <th>1</th>
-                <th>2</th>
-                <th>3</th>
-                <th>4</th>
-                <th>5</th>
-                <th>6</th>
-                <th>7</th>
-                <th>8</th>
-            </tr>
-            <tr>
-                <th class="tabelFontMin">Przo M</th>
-                <th class="tabelFontMin">1 a 29</th>
-                <th class="tabelFontMin">30 a 44</th>
-                <th class="tabelFontMin">45 a 59</th>
-                <th class="tabelFontMin">60 a 74</th>
-                <th class="tabelFontMin">75 a 89</th>
-                <th class="tabelFontMin">90 a 104</th>
-                <th class="tabelFontMin">105 a 119</th>
-                <th class="tabelFontMin">120 a 134</th>
-                <th class="tabelFontMin">135 a 999</th>
-            </tr>
-            <tr>
-                <td>>0,01</td>
-                <td>-</td>
-                <td colspan="2">0</td>
-                <td class="colorRed">-1%</td>
-                <td class="colorRed">-2%</td>
-                <td class="colorRed">-3%</td>
-                <td class="colorRed">-4%</td>
-                <td class="colorRed">-5%</td>
-                <td class="colorRed">-6%</td>
-                <td class="colorRed">-7%</td>
-                <td class="colorRed">-8%</td>
-            </tr>
-            <tr>
-                <td>>300,00</td>
-                <td>1</td>
-                <td colspan="2">1%</td>
-                <td style="font-weight: bold;">0</td>
-                <td class="colorRed">-1%</td>
-                <td class="colorRed">-2%</td>
-                <td class="colorRed">-3%</td>
-                <td class="colorRed">-4%</td>
-                <td class="colorRed">-5%</td>
-                <td class="colorRed">-6%</td>
-                <td class="colorRed">-7%</td>
-            </tr>
-            <tr>
-                <td>>500,00</td>
-                <td>2</td>
-                <td colspan="2">2%</td>
-                <td>1%</td>
-                <td style="font-weight: bold;">0</td>
-                <td class="colorRed">-1%</td>
-                <td class="colorRed">-2%</td>
-                <td class="colorRed">-3%</td>
-                <td class="colorRed">-4%</td>
-                <td class="colorRed">-5%</td>
-                <td class="colorRed">-6%</td>
-            </tr>
-            <tr>
-                <td>>700,00</td>
-                <td>3</td>
-                <td colspan="2">3%</td>
-                <td>2%</td>
-                <td>1%</td>
-                <td style="font-weight: bold;">0</td>
-                <td class="colorRed" class="colorRed">-1%</td>
-                <td class="colorRed" class="colorRed">-2%</td>
-                <td class="colorRed" class="colorRed">-3%</td>
-                <td class="colorRed" class="colorRed">-4%</td>
-                <td class="colorRed" class="colorRed">-5%</td>
-            </tr>
-            <tr>
-                <td>>950,00</td>
-                <td>4</td>
-                <td colspan="2">4%</td>
-                <td>3%</td>
-                <td>2%</td>
-                <td>1%</td>
-                <td style="font-weight: bold;">0</td>
-                <td class="colorRed">-1%</td>
-                <td class="colorRed">-2%</td>
-                <td class="colorRed">-3%</td>
-                <td class="colorRed">-4%</td>
-            </tr>
-            <tr>
-                <td>>1.200,00</td>
-                <td>5</td>
-                <td colspan="2">5%</td>
-                <td>4%</td>
-                <td>3%</td>
-                <td>2%</td>
-                <td>1%</td>
-                <td style="font-weight: bold;">0</td>
-                <td class="colorRed">-1%</td>
-                <td class="colorRed">-2%</td>
-                <td class="colorRed">-3%</td>
-            </tr>
-            <tr>
-                <td>>1.600,00</td>
-                <td>6</td>
-                <td colspan="2">6%</td>
-                <td>5%</td>
-                <td>4%</td>
-                <td>3%</td>
-                <td>2%</td>
-                <td>1%</td>
-                <td style="font-weight: bold;">0</td>
-                <td class="colorRed">-1%</td>
-                <td class="colorRed">-2%</td>
-            </tr>
-            <tr>
-                <td>>2.200,00</td>
-                <td>7</td>
-                <td colspan="2">7%</td>
-                <td>6%</td>
-                <td>5%</td>
-                <td>4%</td>
-                <td>3%</td>
-                <td>2%</td>
-                <td>1%</td>
-                <td style="font-weight: bold;">0</td>
-                <td class="colorRed">-1%</td>
-            </tr>
-            <tr>
-                <td>>3.300,00</td>
-                <td>8</td>
-                <td colspan="2">8%</td>
-                <td>7%</td>
-                <td>6%</td>
-                <td>5%</td>
-                <td>4%</td>
-                <td>3%</td>
-                <td>2%</td>
-                <td>1%</td>
-                <td style="font-weight: bold;">0</td>
-            </tr>
-        </table>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
     <script>
         //Aplicando mascara R$
         $("#valor").mask("999.990,00", { reverse: true })
@@ -379,41 +83,41 @@
                 if (valor < 500) {
                     result = "a vista"
                 } else if (valor < 800) {
-                    result = "1 parcela"
+                    result = "1 parcela de " + new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(valor)
                 } else if (valor < 1200) {
-                    result = "2  parcelas"
+                    result = "2  parcelas de " + new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(valor / 2)
                 } else if (valor < 1600) {
-                    result = "3 parcelas"
+                    result = "3 parcelas de " + new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(valor / 3)
                 } else if (valor < 2300) {
-                    result = "4 parcelas"
+                    result = "4 parcelas de " + new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(valor / 4)
                 } else if (valor < 3800) {
-                    result = "5 parcelas"
+                    result = "5 parcelas de " + new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(valor / 5)
                 } else if (valor < 5750) {
-                    result = "6 parcelas"
+                    result = "6 parcelas de " + new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(valor / 6)
                 } else if (valor < 8300) {
-                    result = "7 parcelas"
+                    result = "7 parcelas de " + new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(valor / 7)
                 } else if (valor > 8300) {
-                    result = "8 parcelas"
+                    result = "8 parcelas de " + new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(valor / 8)
                 }
             } else if (pasta == "leite") {
                 if (valor < 300) {
                     result = "a vista"
                 } else if (valor < 500) {
-                    result = "1 parcela"
+                    result = "1 parcela de " + new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(valor)
                 } else if (valor < 700) {
-                    result = "2 parcelas"
+                    result = "2 parcelas de " + new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(valor / 2)
                 } else if (valor < 950) {
-                    result = "3 parcelas"
+                    result = "3 parcelas de " + new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(valor / 3)
                 } else if (valor < 1200) {
-                    result = "4 parcelas"
+                    result = "4 parcelas de " + new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(valor / 4)
                 } else if (valor < 1600) {
-                    result = "5 parcelas"
+                    result = "5 parcelas de " + new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(valor / 5)
                 } else if (valor < 2200) {
-                    result = "6 parcelas"
+                    result = "6 parcelas de " + new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(valor / 6)
                 } else if (valor < 3300) {
-                    result = "7 parcelas"
+                    result = "7 parcelas de " + new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(valor / 7)
                 } else if (valor > 3300) {
-                    result = "8 parcelas"
+                    result = "8 parcelas de " + new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(valor / 8)
                 }
             }
             var textResult = document.getElementById("result")

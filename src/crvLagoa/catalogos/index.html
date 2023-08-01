@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/9dd9d649b8.js" crossorigin="anonymous"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+    <link rel="manifest" href="/img/site.webmanifest">
+    <link rel="stylesheet" href="../../../style.css">
+    <title>Base Genética</title>
+</head>
+
+<body>
+    <div class="conteudo">
+        <!--LOGO CRV-->
+        <img src="../../../img/logoCrvSemFundo.png" height="130px">
+        <!--SERVIÇOS-->
+        <div class="buttonGroup" style="margin-top: 80px;">
+            <a class="button" href="./corte-zebu.pdf"><i
+                    class="fa-solid fa-book"></i>Corte Zebu</a>
+            <a class="button"
+                href="./corte-europeu.pdf"><i
+                    class="fa-solid fa-book"></i>Corte Europeu</a>
+        </div>
+        <div class="buttonGroup">
+            <a class="button" href="./leite-zebu.pdf"><i
+                    class="fa-solid fa-book"></i>Leite Zebu</a>
+            <a class="button"
+                href="./leite-europeu.pdf"><i
+                    class="fa-solid fa-book"></i>Leite Europeu</a>
+        </div>
+    </div>
+</body>
+
+<!--SE O NAVEGADOR TIVER SUPORTE PARA PDF, ABRE O ARQUIVO, SENÃO, FAZ DOWLOAD DO ARQUIVO-->
+<script>
+    if (!navigator.plugins['PDF Viewer']) {
+        var link = document.getElementsByClassName('link')
+        link.setAttribute("download", "");
+    }
+</script>
+
+</html>

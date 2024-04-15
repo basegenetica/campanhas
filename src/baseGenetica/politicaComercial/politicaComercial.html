@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-        <script src="../../../jquery-3.6.0.min.js"></script>
-        <script src="../../../jquery.mask.min.js"></script>
+    <script src="../../../jquery-3.6.0.min.js"></script>
+    <script src="../../../jquery.mask.min.js"></script>
     <title>Base Genética</title>
 </head>
 
@@ -18,97 +18,8 @@
             <h1>Política Comercial</h1>
             <img src="./img/políticaComercial.png" class="img-fluid" alt="Condição Comercial Corte">
         </div>
-        <hr>
-        <h1 class="text-center">Teste de Condição</h1>
-        <form name="calculo">
-            <div class="mb-3">
-                <p>Valor do pedido</p>
-                <div class="input-group mb-3">
-                    <span class="input-group-text" id="basic-addon1">R$</span>
-                    <input inputmode="numeric" autocomplete="off" type="text" name="valor" id="valor" onkeyup="calcula()"
-                        class="form-control" placeholder="0.00">
-                </div>
-            </div>
-            <div class="mb-3">
-                <p>Selecione o tipo de produto</p>
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item">
-                            <input class="form-check-input " type="radio" name="tipoProduto" id="farmacia"
-                                value="farmacia" onchange="calcula()" checked>
-                            <label class="form-check-label" for="farmacia">Medicamentos</label>
-                        </li>
-                        <li class="breadcrumb-item" aria-current="page">
-                            <input class="form-check-input" type="radio" name="tipoProduto" id="nutricao"
-                                value="nutricao" onchange="calcula()">
-                            <label class="form-check-label" for="nutricao">Capul</label>
-                        </li>
-                        <li class="breadcrumb-item" aria-current="page">
-                            <input class="form-check-input" type="radio" name="tipoProduto" id="sementes"
-                                value="sementes" onchange="calcula()">
-                            <label class="form-check-label" for="sementes">Sementes</label>
-                        </li>
-                    </ol>
-                </nav>
-        </form>
-
-        <div class="mb-3 text-center">
-            <h5>Condição Máxima Permitida</h5>
-            <h3 id="result">-</h3>
-            <h5 id="parcela"></h5>
-        </div>
     </div>
-    <script>
-        //Aplicando mascara R$
-        $("#valor").mask("999990.00", { reverse: true })
-
-        function calcula() {
-            let valor = Number(document.getElementById('valor').value)
-            let tipoProduto = document.querySelector('input[name=tipoProduto]:checked').value
-            let result = document.getElementById('result')
-            let parcela = document.getElementById('parcela')
-            let text
-            let vlrParcela
-
-            switch (tipoProduto) {
-                case 'farmacia':
-                    if (valor < 100) {
-                        text = 'À vista'
-                        vlrParcela = ''
-                    } else if (valor < 200) {
-                        text = '1x (30 dias)'
-                        vlrParcela = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(valor / 1)
-                    } else if (valor < 900) {
-                        text = '2x (30 dias)'
-                        vlrParcela = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(valor / 2)
-                    } else if (valor < 1600) {
-                        text = '3x (30 dias)'
-                        vlrParcela = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(valor / 3)
-                    } else if (valor < 2500) {
-                        text = '4x (30 dias)'
-                        vlrParcela = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(valor / 4)
-                    } else if (valor < 3600) {
-                        text = '5x (30 dias)'
-                        vlrParcela = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(valor / 5)
-                    } else {
-                        text = '6x (30 dias)'
-                        vlrParcela = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(valor / 6)
-                    }
-                    result.innerHTML = text
-                    parcela.innerHTML = vlrParcela
-                    break;
-                case 'nutricao':
-                    result.innerHTML = 'à vista ou 1x(30 dias)'
-                    break;
-                case 'sementes':
-                    result.innerHTML = 'Consultar condição comercial com o <a target="_blank" href="https://api.whatsapp.com/send?phone=5561996401633">Lucas</a>'
-                    break;
-                default:
-                    console.log(tipoProduto)
-            }
-        }
-        calcula()
-    </script>
+   
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>

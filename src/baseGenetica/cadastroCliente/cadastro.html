@@ -32,8 +32,8 @@
                 <input type="text" class="form-control" id="name" required>
             </div>
             <div class="mb-3">
-                <label for="cpf" class="form-label">CPF</label>
-                <input type="text" class="form-control" id="cpf" required>
+                <label for="cpf" class="form-label">CPF/CNPJ</label>
+                <input type="text" inputmode="numeric" class="form-control" id="cpf" required>
             </div>
             <div class="mb-3">
                 <label for="dob" class="form-label">Data de Nascimento</label>
@@ -54,13 +54,13 @@
             </div>
             <div class="mb-3 hidden" id="ieField">
                 <label for="ie" class="form-label">Inscrição Estadual</label>
-                <input type="text" class="form-control" id="ie">
+                <input type="text" inputmode="numeric" class="form-control" id="ie">
             </div>
             <hr>
             <h5>Endereço de Correspondência</h5>
             <div class="mb-3">
                 <label for="cep" class="form-label">CEP</label>
-                <input type="text" class="form-control" id="cep" required>
+                <input type="text" inputmode="numeric" class="form-control" id="cep" required>
             </div>
             <div class="mb-3">
                 <label for="address" class="form-label">Logradouro</label>
@@ -86,11 +86,11 @@
             <h5>Contatos</h5>
             <div class="mb-3">
                 <label for="phone" class="form-label">Telefone</label>
-                <input type="text" class="form-control" id="phone" required>
+                <input type="text" inputmode="numeric" class="form-control" id="phone" required>
             </div>
             <div class="mb-3">
                 <label for="email" class="form-label">E-mail</label>
-                <input type="email" class="form-control" id="email" required>
+                <input type="email" inputmode="email" class="form-control" id="email" required>
             </div>
             <button type="button" class="btn btn-primary mb-3" onclick="generateWhatsAppLink()">Enviar dados</button>
         </form>
